@@ -1,19 +1,31 @@
-# MyShell V1.0.0 — Primera versión pública 🎮
+# MyShell v1.1.0 — Game Library y música 🎮
 
-¡Bienvenidos a MyShell! Launcher independiente para PlayStation Vita con una interfaz inspirada en PS5.
+¡Primera gran actualización de MyShell! Llegan la biblioteca completa, los controles rápidos de música, nuevos temas y varias mejoras.
 
-**Incluye:** biblioteca y carrusel de juegos PS Vita/PSP, selección entre SteamGridDB y HexFlow, covers/fondos/logos, reproductor de música MP3 y WAV compatible, Store con catálogo VitaHomebrewDB, News, información de juegos y seis idiomas.
+## Novedades
+- **Game Library:** mirá todos tus juegos de PS Vita y PSP. El carrusel principal ahora prioriza títulos jugados recientemente y recién instalados.
+- **Desinstalación:** eliminá aplicaciones compatibles de PS Vita desde MyShell, con confirmación. En PSP solo se pueden borrar archivos ISO/CSO individuales directamente en `ux0:/pspemu/ISO/`. Hacé un respaldo primero.
+- **News:** corrección del cambio de pestañas y la liberación de miniaturas.
+- **Música en segundo plano (Beta):** seguí escuchando música por los menús de MyShell. No continúa dentro de los juegos y todavía puede haber pequeños cortes durante cargas pesadas.
+- **Minirreproductor con SELECT:** L1/R1 canción anterior/siguiente, X pausar/reanudar y Círculo/SELECT cerrar.
+- **Temas especiales:** diseños inspirados en PS1, PS2, PS3, PS4 y PS30YEARS.
+- **SteamGridDB:** mejor identificación, verificación de API Key y actualización de imágenes faltantes.
+- **Fondos:** transiciones más suaves y mejoras visuales en Game Library.
 
-## Instalación
-1. Descargá **MyShell.vpk** desde **Assets** de esta Release.
-2. Instalalo con VitaShell en una PS Vita habilitada para homebrew.
-3. Abrilo desde LiveArea y elegí idioma y proveedor de imágenes.
-4. **SteamGridDB necesita una API Key personal:** registrate en https://www.steamgriddb.com/ y generala en https://www.steamgriddb.com/profile/preferences/api. Introducila en el teclado de MyShell durante la primera configuración. Para modificarla: **Ajustes → Carátulas/Artwork → SteamGridDB → □ (Cuadrado)**. Con HexFlow no hace falta esa clave.
+## Cómo actualizar desde v1.0.0
+1. Hacé una copia de seguridad de `ux0:/data/MyShell/`, incluyendo imágenes y configuraciones.
+2. Descargá **`MyShell.vpk`** desde **Assets** de esta Release, no el ZIP de código fuente.
+3. Cerrá MyShell e instalá el nuevo VPK sobre la aplicación anterior con VitaShell. **No desinstales primero la V1.** El Title ID continúa siendo `MYSH00001`.
+4. Abrí MyShell y verificá tus configuraciones y biblioteca.
 
-**Música:** `ux0:/music/` · **PSP:** `ux0:/pspemu/ISO/` y `ux0:/pspemu/PSP/GAME/` · **Artwork manual:** `ux0:/data/MyShell/{covers,backgrounds,logos}/` (archivo con el identificador del juego).
+### Nuevas carpetas para música
+Usá `ux0:/pspemu/MUSIC/` o `ux0:/data/MyShell/music/` para MP3 y WAV compatibles. `ux0:/music/` funciona solo como respaldo si no hay canciones en las anteriores y puede tener permisos restringidos en ciertas consolas.
 
-**Nota:** No es un sistema operativo independiente ni reemplaza LiveArea; no incluye videos/películas. El arranque de PSP necesita el helper externo `RETROLNCR` y el entorno PSP/PS1 correspondiente. Las funciones en línea dependen de terceros.
+### Clave SteamGridDB
+Conseguí tu clave personal en https://www.steamgriddb.com/profile/preferences/api y cargala en MyShell. Las nuevas claves se verifican en línea. No la compartas. HexFlow no necesita clave SteamGridDB.
 
-Documentación completa: https://github.com/ALVA-Store/MyShell
+**Requisitos:** PS Vita habilitada para homebrew y VitaShell. El arranque directo de PSP necesita `RETROLNCR` configurado por separado.
 
-> Antes del anuncio público, verificar en hardware real la instalación de este VPK y las licencias de todos los recursos incorporados.
+**Reportá bugs:** https://github.com/ALVA-Store/MyShell/issues
+
+MyShell es homebrew no oficial y no incluye juegos comerciales, ROMs ni música protegida.
