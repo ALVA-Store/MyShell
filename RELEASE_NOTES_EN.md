@@ -1,31 +1,36 @@
-# MyShell v1.1.0 — Game Library & Music Update 🎮
+# MyShell v1.2.0 — Welcome & Personalization Update 🎮
 
-MyShell's first feature update brings a full Game Library, quick music controls, themed visuals and improvements across the launcher.
+MyShell 1.2.0 puts customization first, with a PS5-inspired welcome experience, editable profiles, flexible carousel options, and per-game artwork choices.
 
 ## What's new
-- **Game Library:** browse all discovered PS Vita and PSP games. Home now highlights recently played and newly installed titles.
-- **Uninstall apps:** uninstall supported PS Vita applications directly in MyShell, with confirmation. For PSP, only individual ISO/CSO files located in `ux0:/pspemu/ISO/` can be removed. Back up important data beforehand.
-- **News:** fixes for tab changes and thumbnail cleanup.
-- **Background music (Beta):** music stays playing across MyShell's menus. Playback does not continue into games; brief stutters may still occur during heavy loading.
-- **Quick player:** press **SELECT** outside Music while a song is active. **L1/R1** = previous/next, **X** = pause/play, **Circle/SELECT** = close.
-- **Anniversary themes:** PS1, PS2, PS3, PS4 and PS30YEARS-inspired visuals.
-- **SteamGridDB:** improved matching, API-key validation and refresh of missing artwork.
-- **Background artwork:** smoother transitions and improved Game Library visuals.
+- **New welcome screen:** PS5-inspired visual style, animated particles, smoother transition into Home, and an optional profile prompt that can be disabled in Settings.
+- **Editable player profile:** change your name and choose an included avatar or supply your own PNG images in `ux0:/data/MyShell/profile/`. Use **SELECT** on the welcome screen to edit.
+- **Customizable game carousel:** select a limit of **6**, **10**, or **unlimited** games per category. Unlimited shows all discovered games in Home and removes the separate Game Library shortcut from the carousel.
+- **Artwork source per game:** decide whether covers, backgrounds and logos come from SteamGridDB, the game's original assets (if available), custom files, or automatic fallback. Different assets can use different sources.
+- **Improved Game Library and UI:** refined selection outline, cleaner bottom-bar spacing with music controls, updated Settings icons and button prompts.
+- **Localization improvements:** more consistent translations in Spanish, English, Portuguese, German, Italian and Polish.
 
-## How to update from v1.0.0
-1. Back up `ux0:/data/MyShell/`, including artwork, settings and the SteamGridDB API key.
-2. Download **`MyShell.vpk`** from this Release's **Assets** (not the source-code ZIP).
-3. Close MyShell and install it over the old app using VitaShell. **Do not uninstall the old app first.** The Title ID remains `MYSH00001`.
-4. Open MyShell and confirm your previous settings and library remain visible.
+## How to update from v1.1.0
+1. Back up `ux0:/data/MyShell/` (including config, SteamGridDB API key, artwork, and profile files).
+2. Download **MyShell.vpk** from this release's **Assets** section — not GitHub's automatic source archives.
+3. Close MyShell. Install the VPK over your current installation using VitaShell. **Do not uninstall the previous version.**
+4. Launch MyShell and check the welcome screen, profile settings, the carousel limit and saved artwork preferences.
 
-### New music-folder guidance
-MP3 and compatible WAV files: `ux0:/pspemu/MUSIC/` or `ux0:/data/MyShell/music/`. The native `ux0:/music/` folder is used only as a fallback when no tracks are found in the first two folders and may be restricted on some consoles.
+**Title ID:** `MYSH00001` (unchanged). The update is intended to preserve user data; a backup is still strongly recommended.
 
-### SteamGridDB API key
-Get your own personal key at https://www.steamgriddb.com/profile/preferences/api and enter it in MyShell. Newly entered keys are validated online. Never share your key. HexFlow does not require a SteamGridDB key.
+## Notes
+- You can skip the welcome screen from Settings → User Experience.
+- Custom avatars: `ux0:/data/MyShell/profile/*.png`.
+- Custom game art: `ux0:/data/MyShell/covers/`, `backgrounds/`, `logos/`.
+- Some games do not include original background or logo assets. Unavailable sources are not selectable.
+- Background music remains **Beta** and ends when launching a separate game; temporary stutters may occur under load.
+- SteamGridDB requires each user to enter a personal API key. It is not included with MyShell.
+- Direct PSP game launching may require the separately installed `RETROLNCR` helper.
 
-**Requirements:** homebrew-enabled PS Vita, VitaShell. PSP launching requires a separately configured `RETROLNCR` helper.
+**Requirements:** A homebrew-enabled PS Vita and VitaShell. MyShell is an unofficial launcher, not a full operating-system replacement.
 
-**Report bugs:** https://github.com/ALVA-Store/MyShell/issues
+**Bug reports:** https://github.com/ALVA-Store/MyShell/issues
 
-MyShell is unofficial homebrew. No commercial games, ROMs or copyrighted media are included.
+**Support development:** https://www.paypal.com/paypalme/alvadesigns00
+
+Review rights to distribute any bundled third-party artwork, music, icons and fonts before publishing the release.

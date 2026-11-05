@@ -1,27 +1,28 @@
 # Changelog — MyShell
 
-## [1.1.0] — 2026-10-30
+## [1.2.0] — 2026-11-04
 
-### Added / Added
-- Full **Game Library** pages for PS Vita and PSP, with a separate compact Home carousel displaying recently played / recently installed titles.
-- **Uninstall** actions from Game Library / context menus, with a confirmation dialog. The PS Vita path uses the system package promoter; the PSP path allows only direct `.iso`/`.cso` files in `ux0:/pspemu/ISO/`. Important: back up save data before using uninstall.
-- **Music background playback (Beta)** inside MyShell, plus **SELECT quick music player** (L1/R1 previous/next; X play/pause; Circle/SELECT close).
-- **Anniversary theme options** for PS1, PS2, PS3, PS4 and PS30YEARS inspired interfaces.
-- **SteamGridDB API key verification and refresh-library option** for missing covers, backgrounds and logos.
+### Added / Agregado
+- A PS5-inspired welcome screen with a user profile, particle effects, power button and a configurable skip option.
+- Profile editing: user name, built-in and user-supplied PNG avatars; adjustable circular avatar presentation.
+- Home carousel limit selector: 6, 10 or unlimited entries per category; unlimited mode hides the separate Game Library entry from the carousel.
+- Per-game source selection for cover, background and logo: automatic, original, SteamGridDB or custom artwork when available.
 
 ### Improved / Mejorado
-- Game title identification / artwork matching for SteamGridDB.
-- Background transitions and Game Library entry/preview transitions.
-- Local music discovery: `ux0:/pspemu/MUSIC/` and `ux0:/data/MyShell/music/`, with conditional legacy fallback to `ux0:/music/`.
+- Smooth welcome-to-carousel transition and visual handling of the initial background.
+- Game Library selection outline and bottom-bar alignment, including quick music controls.
+- Profile editor controls, button graphics, Settings icons and translated User Experience section.
+- Six-language interface: Spanish, English, Portuguese, German, Italian and Polish.
 
-### Fixed / Corregido
-- News transition and thumbnail cleanup issue when leaving News.
+### Notes / Notas
+- The Title ID remains `MYSH00001` for in-place updates. Back up `ux0:/data/MyShell/` before updating.
+- Music continues to be Beta; heavy operations can interrupt playback.
+- Original game logos/backgrounds are not available for every title, and PSP artwork may have additional limitations.
 
-### Known limitations
-- Background audio can stutter under heavy image or network loading and ends when launching an external game.
-- `RETROLNCR` is needed for direct PSP launch.
-- This project remains a launcher; it does not replace LiveArea, and video playback is not included.
+## [1.1.0] — 2026-10-30
+- Game Library for PS Vita and PSP; recently played and installed games on Home.
+- App uninstall actions with safeguards, quick music controls, background music Beta and anniversary-style themes.
+- SteamGridDB validation and artwork-matching improvements; News and background-transition fixes.
 
 ## [1.0.0] — 2026-10-23
-
-First public release: PS Vita and PSP library, game carousel, Favorites, artwork from SteamGridDB or HexFlow, News, homebrew Store, Wikipedia/Wikidata game information, local MP3 and compatible WAV player, and multilingual UI.
+- First public release with PS Vita/PSP launcher, Favorites, SteamGridDB/HexFlow images, Store, News, Wikipedia game information, local music and six languages.
